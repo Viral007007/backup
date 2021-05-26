@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #layer1{;
+            position: absolute;
+            z-index:;
+            top: ;
+            left: ;
+            background-color:tomato; 
+        }
+        #layer2{
+            z-index:-1 ;
+            position: absolute;
+            top: 50px;
+            left: ;
+            background-color:lime; 
+        }
+        #layer3{
+            z-index: 1;
+            position: absolute;
+            top:50px ;
+            left: ;
+            background-color:hotpink; 
+        }
+
+    </style>
+</head>
+<body>
+    <div id="layer1">
+        <h1>this is div1</h1>
+        <div id="layer2">
+            <h1>this is div2</h1>
+            <div id="layer3">
+                <h1>this is div3</h1>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

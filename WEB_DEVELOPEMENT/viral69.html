@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+        .container{
+            border: 1px solid black;
+            width: 80%;
+            margin: 40px auto ;
+            text-align: center;
+            padding: 20px;
+            height: auto;
+            border-radius: 5px;
+        }
+        #para{
+
+        }
+        input[type="button"]{
+            padding: 10px;
+            margin: 10px;
+            width: 100%;
+            border-radius: 5px;
+            display: block;
+            margin: auto;
+        }
+
+
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Show - Hide</h1>
+      <hr>
+
+      <p id="para" >
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis hic
+        dolores excepturi, incidunt quaerat exercitationem minus autem
+        perferendis eius vero animi ducimus corporis! Labore debitis voluptates,
+        itaque non velit vitae maiores quisquam commodi voluptatibus dolor ea
+        atque cum exercitationem quam provident natus blanditiis ab ad quod
+        fugit! Atque ipsam architecto natus reiciendis, vitae earum
+        reprehenderit facilis corrupti cumque sunt mollitia ipsum error suscipit
+        distinctio odio blanditiis officiis ex vero ipsa soluta nostrum
+        corporis? Ex ad necessitatibus labore, esse distinctio perferendis
+        voluptate maiores ratione tempore aperiam doloribus. Excepturi magni qui
+        autem vel id hic vitae porro, at officia harum molestiae placeat?
+      </p>
+
+      <input type="button" value="Show/Hide" onclick="showhide()" id="btn">
+
+    </div>
+
+  </body>
+  <script>
+      function showhide()
+      {
+        let para = document.getElementById('para');
+        // para.style.display = 'none';
+        if(para.style.display != 'none')
+        {
+            para.style.display = 'none';
+            para.style.color = '';
+        }
+        else
+        {
+            para.style.display = 'block';
+        }
+      }
+  </script>
+</html>

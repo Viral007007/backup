@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let current_date = new Date();
+      console.log(current_date);
+      current_date = new Date(1000);
+      console.log(current_date);
+      current_date = new Date("april 15 1990 11:30:00");
+      console.log(current_date);
+      current_date = new Date(1990, 3, 15, 11, 30, 00, 1);
+      console.log(current_date);
+      current_date = Date.now();
+      console.log(current_date);
+      current_date = new Date();
+      console.log(current_date.constructor);
+
+      let date_prop = new Date(0);
+      console.log(date_prop);
+      console.log(date_prop.getFullYear());
+      console.log(date_prop.getMonth());
+      console.log(date_prop.getDate());
+      console.log(date_prop.getDay());
+      console.log(date_prop.getHours());
+      console.log(date_prop.getMinutes());
+      console.log(date_prop.getSeconds());
+    </script>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>
+        Document
+    </title>
+
+    <style>
+        body{
+            overflow: hidden;
+        }
+        #box{
+            margin: 0px;
+            width: 4%;
+            height: 1vh;
+            /* border:1px solid black; */
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            position: absolute;
+            border-radius: 75px;
+            background-color:skyblue;
+            animation-name: viral;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-out;
+        }
+        @keyframes viral{
+            0%{
+                width: 15%;
+                top: 10px;
+                left: -150px;
+                background-color: blue;
+            }
+            33%{
+                background-color: red;
+                top: 10px;
+            }
+            50%{
+                width: 5%;
+                top: 10px;
+                
+            }
+            66%{
+                background-color: yellow;
+                top: 10px;
+            }
+            100%{
+                margin: 0px;
+                top: 10px;
+                left: 100%;
+                width: 30%;
+                background-color: green;
+            }    
+        }
+    </style>
+
+</head>
+
+<body>
+    
+    <div id="box"></div>
+
+</body>
+
+</html>

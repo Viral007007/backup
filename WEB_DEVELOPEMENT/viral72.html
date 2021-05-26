@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            border: 1px solid black;
+            padding: 10px;
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+        button{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <button id="small" onclick="_100P()" >100%</button>
+        <button id="large" onclick="_50P()" >50%</button>
+    </div>
+</body>
+<script>
+    function _100P(){
+        let _container = document.getElementById("container");
+        _container.style.width = '90%';
+    }
+    function _50P(){
+        let _container = document.getElementById("container");
+        _container.style.width = '50%'; 
+    }
+</script>
+</html>

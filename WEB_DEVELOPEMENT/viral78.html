@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0px;
+        font-family: 'Ubuntu', sans-serif;
+        color: aliceblue;
+      }
+      body {
+        background-color: lightskyblue;
+        /* display: flex; */
+        /* align-items: center; */
+        /* justify-content: center; */
+        /* flex-direction: row; */
+      }
+      #hem_berger {
+        position: absolute;
+        left: 10px;
+        background-color: violet;
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      #hem_berger:hover{
+        background-color: rgba(165, 113, 165, 0.863);
+      }
+      #hem_berger div:nth-child(1) {
+        background-color: white;
+        width: 30px;
+        height: 4px;
+        border-radius: 5px;
+        margin: 2px;
+      }
+      #hem_berger div:nth-child(2) {
+        background-color: white;
+        width: 30px;
+        height: 4px;
+        border-radius: 5px;
+        margin: 2px;
+      }
+      #hem_berger div:nth-child(3) {
+        background-color: white;
+        width: 30px;
+        height: 4px;
+        border-radius: 5px;
+        margin: 2px;
+      }
+      #links {
+          margin: 10px;
+          border: 2px solid white;
+          width: 200px;
+          height: 200px ;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 10px;
+          border-top-left-radius:0px ;
+          border-bottom-right-radius:50px ;
+          transition: 1s;
+          overflow: hidden;
+          visibility: visible;
+      }
+      @media screen and (max-width:1000px) {
+          #links{
+              visibility: hidden;
+          }
+
+          
+      }
+      #links ul{
+          margin: 0px;
+          padding: 0px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction:column;
+
+      }
+      #links ul li {
+          list-style: none;
+          margin: 10px 10px;
+          cursor: pointer;
+
+
+      }
+    </style>
+
+  </head>
+  <body>
+    <div id="hem_berger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div id="trans" >
+        <div id="links">
+            <ul>
+              <li>Home</li>
+              <li>About</li>
+              <li>Login</li>
+            </ul>
+          </div>
+    </div>
+  </body>
+
+  <script>
+    var i=0;
+    let hem_berger = document.getElementById("hem_berger")
+    console.log(hem_berger)
+    document.getElementById("hem_berger").addEventListener( "click", () => {
+        console.log("clicked inside function")
+        var links = document.getElementById('links');
+        if(i==0)
+        {
+            links.style.width = '0px';
+            links.style.height = '0px';
+            // links.style.display = 'none'
+            links.style.visibility = 'hidden';
+            links.style.margin = '10px';
+            links.style.borderColor='skyblue'; 
+            i=1;
+            console.log("clicked inside first condition")
+        }
+        else if(i==1){
+            links.style.width ='200px' ;
+            links.style.height = '200px';
+            console.log("clicked inside second condition")
+            links.style.visibility = 'visible';
+            links.style.margin = '10px'
+            links.style.borderColor='white'; 
+            i=0;
+        }
+    });
+</script>
+</html>

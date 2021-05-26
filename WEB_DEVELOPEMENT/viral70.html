@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+        function displaytime()
+        {   let space = "..............."
+            let time = new Date();
+            document.getElementById("para1").innerHTML = `${time} ${ space } /* Date() */`;
+            time = new Date(0);
+            document.getElementById("para2").innerHTML = `${time} ${ space } /* Date(0) */`;
+            time = new Date("2029-09-30");
+            document.getElementById("para3").innerHTML = `${time} ${ space } /* Date(2029-9-30) */`;
+            time =  Date.now();
+            document.getElementById("para4").innerHTML = `${time} ${ space } /* Date.now() */`;
+        }
+        setInterval(displaytime,1);
+    </script>
+    <style>
+        div{
+            border: 1px solid black;
+            width:80%;
+            padding: 20px;
+            margin: auto;
+            margin-top: 20px;
+        }
+        div h1{
+            display: block;
+            margin: auto;
+            width: 50%;
+            text-align: center;
+        }
+        div p{
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        div button{
+            display: block;
+            padding: 5px;
+            width: 50%;
+            margin: auto;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>This is heading</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor impedit
+        neque aut inventore quam doloribus qui non! Veniam dolorum consectetur
+        quaerat corporis quibusdam perferendis debitis eum vitae natus illum
+        laudantium necessitatibus praesentium repellat consequuntur aliquid id
+        labore totam, excepturi eveniet consequatur non laboriosam? Eum
+        asperiores nostrum nobis deserunt maiores itaque ea amet nisi
+        cupiditate. Provident qui incidunt blanditiis vel tenetur tempore esse.
+        Sed laudantium porro mollitia quidem, incidunt necessitatibus atque
+        nesciunt laborum et, accusantium sapiente velit perferendis modi
+        explicabo maxime quod tempora, asperiores illo! Totam eos quod earum
+        magni, nobis dicta recusandae porro repellendus mollitia in tempore
+        velit odit dolorem?
+      </p>
+      <button> Click </button>
+
+      <div>
+          <h1>Time</h1>
+          <p id="para1" ></p>
+          <p id="para2" ></p>
+          <p id="para3" ></p>
+          <p id="para4" ></p>
+      </div>
+    </div>
+  </body>
+</html>

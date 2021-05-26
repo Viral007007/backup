@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            background-color: ;
+            border: 1px solid black;
+            padding: 20px;
+            width: 50%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #start{
+            display: block;
+            width: 40%;
+            margin: 10px auto;
+        }
+        #stop{
+            display: block;
+            width: 40%;
+            margin: 10px auto;
+        }
+        #display{
+            width: 50%;
+            margin: 10px auto;
+            height: 10vh;
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container" >
+        <button id="start" onclick="start()" >Start</button>
+        <button id="stop" onclick="stop()" >Stop</button>
+    </div>
+    <div id="display" ></div>
+</body>
+
+<script>
+    var now = Date.now()
+    var _start
+    function start()
+    {
+        var display = document.getElementById("display");
+        let time = ( Date.now() - now ) / 1000 ;
+        display.innerHTML = time;  
+        
+    }
+    if(_start)
+    {
+        _start = setInterval(start,1);
+    }
+    function stop(){
+        clearInterval(_start)
+    }
+</script>
+</html>

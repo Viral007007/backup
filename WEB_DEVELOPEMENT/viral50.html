@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+
+    <style>
+        #container{
+            width: 100%;
+            height: 500px;
+            border: 1px solid black;
+
+            /*----> to initialize flex */
+            display: flex;
+
+
+
+
+
+            /*----> property for flex container <----*/
+            
+            
+            
+            
+            
+            /*---->flex direction*/
+
+            /* flex-direction: row;  */
+            /*default*/
+
+            /* flex-direction: column; */
+            /* flex-direction: row-reverse; */
+            /* flex-direction: column-reverse; */
+
+            
+            
+            
+            
+            
+            /*----> flex wrap */
+
+            /* flex-wrap: nowrap;
+            /* default  */
+            /* flex-wrap: wrap; */
+            /* flex-wrap: wrap-reverse;*/
+
+            
+            
+            
+            
+            
+            
+            /*----> jestify content in horizontal direction */
+
+            /* justify-content:center; */
+
+            /* justify-content: space-between;   */
+            /*same space between succecive box*/
+
+            /* justify-content: space-evenly;  */
+            /*same space between succecive box including staring and end*/
+
+            /* justify-content: space-around;  */
+            /*same space around box*/
+
+            
+            
+            
+            
+            /*----> align items */
+
+            /* align-items: stretch; */
+            /*default property*/
+
+            /* align-items: center;*/
+            /*same height from top and bottom (same vertically align)*/
+
+            /* align-items: flex-end; */
+            /* verticaly starts from the bottom*/
+
+            /* align-items: flex-start;  */
+            /*verticaly starts from the top*/
+    
+        }
+        .box{
+            /* higth and width for items */
+            width: 200px;
+            height: 200px;
+
+            border: 1px solid black;
+            margin: 5px;
+            padding: 5px;
+        }
+        #box1{
+             /* property for flex items */
+
+            /* order: 2 ;   */
+            /*heigher the order, laster it shaw in coninter*/
+            
+            /* flex-grow: 2 ;  */
+            /*auto increament its width according to value*/
+            /*heiher the flex grow , more width increase , valid for width increment of containter*/
+            
+            /* flex-shrink: 2; */
+            /* heigher the flex-shrink , heigher shrink(sankochavu) take place valid for shrink time*/
+
+            /* flex-basis: 250px; */
+            /* to chage default width or height */
+            /*when flex direction is set to row flex-basix will contral width */
+            /*when flex direction is set to column flex-basic will contral height*/
+
+        }
+        #box2{
+            /* property for flex items */
+
+            /* flex: 2 2 360px ;  */
+            /*flex : flex_grow flex_shrink flex_basis (short_hand_property) ; */
+        }
+        #box3{
+             /* property for flex items */
+
+            /* align-self: flex-end;  */
+            /*will go to end of the container*/ 
+            /* align-self: flex-start;  */
+            /*will go to top of the container*/ 
+            /* align-self: center; */
+            /* will go to center(vertilal) of the container  */
+        }
+        #box4{
+             /* property for flex items */
+
+        }
+        #box5{
+             /* property for flex items */
+
+        }
+        #box6{
+             /* property for flex items */
+
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="container">
+        <div class="box" id="box1">box 1</div>
+        <div class="box" id="box2">box 2</div>
+        <div class="box" id="box3">box 3</div>
+        <div class="box" id="box4">box 4</div>
+        <div class="box" id="box5">box 5</div>
+        <div class="box" id="box6">box 6</div>
+    </div>
+    
+</body>
+</html>

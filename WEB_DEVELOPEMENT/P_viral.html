@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <title>
+        Document
+    </title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Raleway', sans-serif;
+        }
+        body{
+            height: 500vh;
+        }
+        #navigation{
+            /* border: 3px solid green; */
+            margin: 1px auto;
+            width: auto;
+            height: 10vh;
+            position:fixed;
+            top: -1px;
+            left: 0%;
+            right: 0%;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 1s;
+
+        }
+        #navigation #left{
+            /* border: 3px solid green; */
+            margin: 10px;
+            width: 30%;
+            height: 8vh;
+            font-size: 40px;
+            box-sizing: border-box;
+            padding-top: px;
+            color: white;
+        }
+        #navigation #center{
+            /* border: 3px solid green; */
+            margin: 10px;
+            width: 30%;
+            height: 8vh;
+        }
+        #navigation #right{
+            /* border: 3px solid green; */
+            margin: 10px;
+            width: 30%;
+            height: 8vh;
+        }
+        @media screen and (max-width : 1170px ) {
+            #navigation #right{
+                display:none;
+            }
+        }
+        #navigation ul{
+            list-style: none;
+        }
+        #navigation ul li{
+            float: left;
+            color: white;
+            font-size: 12px;
+            margin: 17px 10px;
+            transition: 0.3s;
+        }
+        #navigation ul li:hover{
+            color: orange;
+            margin: 16px 10px;
+            font-size: 14px;
+        }
+        #index_section{
+            /* border: 3px solid green; */
+            width: 100%;
+            height: 90vh;
+            margin: 0px auto;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content:center;
+            background-color: rgba(33, 33, 39, 0.63);
+        }
+        #index_section img{
+            width: 100%;
+            height: 100vh;
+            /* position: absolute; */
+            z-index:-1;
+        }
+        #index_section #container{
+            /* border: 3px solid green; */
+            width: 50%;
+            height: 50vh;
+            position: absolute;
+            text-align: center;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: white;
+
+        }
+        #index_section #container h1{
+            margin: 10px 10px;
+            font-size:40px;
+            font-weight:bold;
+        }
+        #index_section #container p{
+            margin: 10px 10px;
+        }
+        #index_section #container sub{
+            margin: 10px 10px;
+        }
+        #index_section #container sub button{
+            padding: 10px;
+            border: 1px solid orange;
+            border-radius: 100px;
+            width: 150px;
+            background-color: rgba(240, 248, 255, 0);
+            color: white;
+            transition: 0.5s;
+        }
+        #index_section #container sub button:hover{
+            background-color: orange;
+        }
+        #company{
+            border: 3px solid green;
+            width: 90%;
+            height: 15vh;
+            margin: 10px auto;
+        }
+        #about{
+            border: 3px solid green;
+            width: 90%;
+            height: 60vh;
+            margin: 10px auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+        }
+        #about #about_left{
+            border: 3px solid green;
+            width: 40%;
+            height:90%;
+        }
+        #about #about_right{
+            border: 3px solid green;
+            width: 40%;
+            height:90%;
+        }
+        #project_count{
+            border: 3px solid green;
+            width: 90%;
+            height: 20vh;
+            margin: 10px auto;
+        }
+        #services{
+            border: 3px solid green;
+            width: 90%;
+            height: 120vh;
+            margin: 10px auto;
+            display: grid;
+            /* align-items: center; */
+            /* justify-content: center; */
+            grid-template-areas:
+                'a a a'
+                'b c d'
+                'e f g';
+        }
+        #services #para{
+            grid-area: a;
+            border: 3px solid green;
+            width: 70%;
+            height: 10vh;
+            align-self: center;
+            justify-self: center;
+            /* margin: 10px auto; */
+        }
+        #services_box1{
+            grid-area:b;
+            border: 3px solid green;
+            width: auto;
+            height: 40vh;
+            margin: 10px;
+        }
+        #services_box2{
+            grid-area: c;
+            border: 3px solid green;
+            width: auto;
+            height: 40vh;
+            margin: 10px;
+        }
+        #services_box3{
+            grid-area: d;
+            border: 3px solid green;
+            width: auto;
+            height: 40vh;
+            margin: 10px;
+        }
+        #services_box4{
+            grid-area: e;
+            border: 3px solid green;
+            width: auto;
+            height: 40vh;
+            margin: 10px;
+        }
+        #services_box5{
+            grid-area: f;
+            border: 3px solid green;
+            width: auto;
+            height: 40vh;
+            margin: 10px;
+        }
+        #services_box6{
+            grid-area: g;
+            border: 3px solid green;
+            width: auto;
+            height: 40vh;
+            margin: 10px;
+        }
+    </style>
+
+    <script>
+        window.addEventListener('scroll',() =>{
+            const y_scrolled = window.scrollY;
+            const scrollable = document.documentElement.scrollHeight;
+            console.log(scrollable)
+            console.log(y_scrolled)
+            var nav = document.getElementById('navigation');
+            if(y_scrolled < 50)
+            {
+                nav.style.backgroundColor = 'rgba(0,0,0,0)'
+            }
+            if(y_scrolled < 500 && y_scrolled > 50)
+            {
+                nav.style.backgroundColor = 'rgba(10,10,10,0.5)'
+      
+            }
+            if(y_scrolled < 1000 && y_scrolled > 500)
+            { 
+                nav.style.backgroundColor = ' rgba(33, 33, 39, 1)'
+      
+            }
+            if(Math.ceil(y_scrolled) == scrollable)
+            {
+                alert('You reach at bottom');
+            }
+        })
+    </script>
+
+  </head>
+
+
+  <body>
+    <section id="navigation"  >
+        <div id="left">Baker</div>
+        <div id="center"></div>
+        <div id="right">
+            <ul>
+                <li>Home</li>
+                <li>about</li>
+                <li>Services</li>
+                <li>Protfolio</li>
+                <li>Team</li>
+                <li>Pricing</li>
+
+            </ul>
+        </div>
+    </section>
+
+    <section id="index_section">
+        <img src="./Templets/project_1/assets/img/hero-bg.jpg">
+        <div id="container">
+            <h1>
+                Welcome to Baker
+            </h1>
+            <p>
+                We are team of talented designers making websites with Bootstrap
+            </p>
+            <sub>
+                <button>Get Started</button>
+            </sub>
+        </div>
+    </section>
+
+    <section id="company" >
+
+    </section>
+
+    <section id="about" >
+        <div id="about_left" ></div>
+        <div id="about_right" ></div>
+    </section>
+
+    <section id="project_count" >
+
+    </section>
+
+    <section id="services">
+        <div id="para"></div>
+        <div class="services_box"id="services_box1"></div>
+        <div class="services_box"id="services_box2"></div>
+        <div class="services_box"id="services_box3"></div>
+        <div class="services_box"id="services_box4"></div>
+        <div class="services_box"id="services_box5"></div>
+        <div class="services_box"id="services_box6"></div>
+    </section>
+  </body>
+
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+        
+        <style>
+
+            *{
+                margin: 0px;
+                font-family: 'Raleway', sans-serif;
+            }
+
+            #container{
+                height: 80vh;
+                border: 1px solid black;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgba(0, 0, 0, 0.514);
+
+            }
+
+            #container::before{
+            background:url(./demo_website/project_1/assets/img/hero-bg.jpg);
+            content: "";
+            background-size: 100% 100vh;
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 80vh;
+            z-index: -1;
+            opacity: 1;
+            }
+
+            #box{
+                width: 40%;
+                height: 30vh;
+                /* border: 1px solid black; */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            #box *{
+                margin: 10px;
+                font-family: 'Raleway', sans-serif;
+                color: white;
+            }
+
+            #box a{
+                text-decoration: none;
+                border: 2px solid orange;
+                padding: 7px;
+                border-radius: 100px;
+                transition: 0.5s;
+                width: 7vw;
+                text-align: center;
+
+            }
+
+            #box a:hover{
+                background-color: orange;
+            }
+
+            #navbar{
+                position: fixed;
+                width: 70%;
+                left: 15%;
+                top: 10px;
+            }
+
+            #navbar p{
+                font-size: 30px;
+                margin-top: 5px;
+                color: white;
+                font-weight: bolder;
+                display: inline;
+            }
+
+            #navbar ul{
+                float: right;
+                display: flex;
+                flex-direction:row-reverse;
+                margin-top: 15px;
+                list-style: none;
+            }
+
+            #navbar ul li{
+                font-size: 10px;
+                color: white;
+                margin: 1px 10px;
+                margin-top: 0px;
+                padding: 5px;
+                transition: 0.5s;
+            }
+
+            #navbar ul li:hover{
+                color: orange;
+                cursor: pointer;
+
+            }
+
+            #pti{
+                display: flex;
+                justify-content: space-between;
+                margin: auto;
+                margin-top: 20px;
+                width: 70%;
+                background-color: rgba(128, 128, 128, 0.068);
+
+            }
+
+            .pati_box{
+                overflow: hidden;
+                width: 10%;
+            }
+
+            #pti img {
+                margin-top: 15px;
+                width: 100%;
+            }
+            
+        </style>
+    </head>
+
+    <body>
+
+        <div id="navbar">
+            <p>Baker</p>
+            <ul>
+                <li>contact</li>
+                <li>Drop Down</li>
+                <li>Pricing</li>
+                <li>term</li>
+                <li>Protfilio</li>
+                <li>Service</li>
+                <li>About</li>
+                <li>Home</li>
+            </ul>
+        </div>
+
+        <div id="container">
+            <div id="box">
+                <h1>Welcome to Baker</h1>
+
+                <p>We are team of talented designers making websites with Bootstrap</p>
+
+                <a href="">Get Start</a>
+            </div>
+        </div>
+
+        <div id="pti" >
+            <div class="pati_box" id="pati_box-1"><img src="./demo_website/project_1/assets/img/clients/client-1.png" alt=""></div>
+            <div class="pati_box" id="pati_box-2"><img src="./demo_website/project_1/assets/img/clients/client-2.png" alt=""></div>
+            <div class="pati_box" id="pati_box-3"><img src="./demo_website/project_1/assets/img/clients/client-3.png" alt=""></div>
+            <div class="pati_box" id="pati_box-4"><img src="./demo_website/project_1/assets/img/clients/client-4.png" alt=""></div>
+            <div class="pati_box" id="pati_box-5"><img src="./demo_website/project_1/assets/img/clients/client-5.png" alt=""></div>
+            <div class="pati_box" id="pati_box-6"><img src="./demo_website/project_1/assets/img/clients/client-6.png" alt=""></div>
+        </div>
+
+    </body>
+
+</html>

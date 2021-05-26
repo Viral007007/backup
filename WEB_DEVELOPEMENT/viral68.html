@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>document tilte</title>
+  </head>
+
+  <body>
+    <div id="main" class="container">
+      <ul id="nav">
+        <li>Home</li>
+        <li>About</li>
+        <li>Services</li>
+        <li>More About Us</li>
+        <li>Contact Us</li>
+      </ul>
+    </div>
+
+    <div id="main" class="container">
+      <ul id="nav">
+        <li>Home1</li>
+        <li>About1</li>
+        <li>Services1</li>
+        <li>More About Us1</li>
+        <li>Contact Us1</li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    let main = document.getElementById("main");
+    console.log(main);
+
+    let nav = document.getElementById("nav");
+    console.log(nav);
+
+    let containers = document.getElementsByClassName("container");
+    console.log(containers);
+
+    let sel = document.querySelector(".container");
+    console.log("Selector returns ", sel);
+
+    sel = document.querySelectorAll("#nav");
+    console.log("Selector returns ", sel);
+  </script>
+</html>
