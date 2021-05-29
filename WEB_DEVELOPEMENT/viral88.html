@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background-color:rgb(100, 197, 156);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        #container{
+            width: 500px;
+            height: 500px;
+            background-color: aliceblue;
+            border-radius: 50%;
+            box-shadow: -10px 10px 30px 5px rgba(0, 0, 0, 0.473);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #sub{
+            width: 400px;
+            height: 10px;
+            /* border: 1px solid black; */
+            animation-name: viral ;
+            animation-duration:60s;
+            animation-iteration-count: infinite;
+            animation-timing-function:linear;
+            position: absolute;
+        }
+        @keyframes viral {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        #min{
+            width: 50%;
+            height: 10px;
+            float: right;
+            background-color:rgb(100, 197, 156) ;
+            border-radius: 100px;
+        }
+        #sub_sec{
+            width: 400px;
+            height: 10px;
+            /* border: 1px solid black; */
+            animation-name: viral1 ;
+            animation-duration:1s;
+            animation-iteration-count: infinite;
+            animation-timing-function:linear;
+            position: absolute;
+            /* transform: rotate(90deg); */
+        }
+        #sec{
+            width: 50%;
+            height: 10px;
+            float: right;
+            background-color:rgb(100, 197, 156);
+            border-radius: 100px;
+            /* transform: rotate(90deg); */
+        }
+        @keyframes viral1 {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        #dot{
+            width: 20px;
+            height: 20px;
+            border-radius:50% ;
+            background-color:rgb(100, 197, 156)  ;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <div id="container" >
+        <div id="sub" >
+            <div id="min"></div>
+        </div>
+        <div id="sub_sec" >
+            <div id="sec" ></div>
+        </div>
+        <div id="dot" ></div>
+    </div>
+</body>
+</html>
+
+<!-- -webkit-animation: mymove 15s infinite; /* Chrome, Safari, Opera */
+    animation: mymove 15s infinite;
+}    
+    /* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    from {top: 60px;}
+    to {top: -200px;}
+}
+
+@keyframes mymove {
+    from {top: 60px;}
+    to {top: -200px;}
+} -->
