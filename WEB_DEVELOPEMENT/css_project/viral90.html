@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        :root{
+            --gradiant : linear-gradient(45deg,lightblue,violet,hotpink,tomato,yellow);
+        }
+        body{
+            height: 100vh;
+            width: 100%;
+            background-color: rgba(201, 201, 201, 0.808);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: var(--gradiant);
+            background-size: 300%;
+            animation-name: bg-anim;
+            animation-duration: 40s;
+            animation-iteration-count: infinite;
+            animation-timing-function: none;
+        }
+        @keyframes bg-anim {
+            0%{
+                background-position:left;
+            }
+            50%{
+                background-position: right;
+            }
+            100%{
+                background-position:left;
+            }
+            
+        }
+        #container{
+            border-radius: 10px;
+            padding: 30px;
+            box-sizing: border-box;
+            width: 400px;
+            height: 150px;
+            background-color: white;
+            box-shadow: -10px 10px 10px 0px rgba(75, 75, 75, 0.548);
+        }
+        #btn{
+            margin-top: 15px;
+            border: 0px;
+            padding: 7px;
+            border-radius: 5px;
+            background-image: var(--gradiant) ;
+            background-size: 300%;
+            background-position: left ;
+            transition: 1s;
+        }
+        #btn:hover{
+            cursor: pointer;
+            background-position: right ;
+        }
+        div{
+            background-image:;
+        }
+    </style>
+</head>
+<body>
+    <div id="container" >
+        <h1>Animation Gradients </h1>
+        <button id="btn" >Button</button>
+    </div>
+</body>
+</html>

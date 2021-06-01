@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: #000000;
+            color: #effeff;
+        }
+      #container {
+        width: 100px;
+        height: 50px;
+        border: 2px solid rgb(24, 24, 24);
+        margin: auto;
+        text-align: center;
+        border-radius: 10px;
+        background-color: #ffffff;
+        border-radius:30px;
+
+        transition:  1s;
+      }
+
+      #icon{
+          width:50px;
+          height: 40px;
+          border: 1px solid black;
+          margin: 4px;
+          border-radius: 30px;
+          background-color: rgb(255, 255, 255);
+          float:left;
+      }
+      #para{
+          margin: auto;
+          width: 80%;
+
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+      }
+      #para p {
+          text-align: center;
+      }
+    </style>
+  </head>
+  <body id="temp" >
+    <div id="container">
+      <div id="icon" ></div>
+    </div>
+    <div id="para" >
+        <h1>Black && white</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem omnis numquam, magni beatae pariatur similique velit in debitis aliquam rem natus reiciendis delectus magnam maxime quis eos ex nihil. Magni?</p>
+    </div>
+    <script>
+        let value = 0;
+        let icon = document.getElementById("icon");
+        let con = document.getElementById("temp");
+        
+        
+        icon.addEventListener('click',() => {
+            console.log("1 : " + value );
+            console.log("2 : inside the eventliser" );
+
+        if(value == 0){
+            console.log("Inside the if statement");
+            icon.style.float = "right"
+            icon.style.backgroundColor = "black"
+            con.style.backgroundColor = "white"
+            con.style.color = "black"
+            value = 1;
+            console.log("3 : "  + value)
+        }
+        else if(value == 1) {
+            icon.style.float = "left";
+            icon.style.backgroundColor = "white"
+            con.style.backgroundColor = "black"
+            con.style.color = "white"
+            console.log( "4 : " + value)
+            value = 0;
+        }
+        console.log("5 : " + value)
+        })
+    </script>
+  </body>
+</html>

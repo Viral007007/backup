@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        *{
+            margin: 0px;
+            overflow: hidden;
+        }
+        #box{
+            width: 15% ;
+            height: 5px;
+            /* border: 1px solid black; */
+            border-radius: 5px;
+            position: absolute;
+            top: 50px;
+
+            animation: viral;
+            animation-duration:1.5s;
+            animation-iteration-count: infinite;
+
+            animation-timing-function: ease-out;
+
+        }
+        @keyframes viral{
+            0%{
+              left: -15%;
+              width: 15%;
+            }
+            12.5%{background-color: skyblue;}
+            25.5%{}
+            37.5%{background-color: red;}
+            50%{
+                width: 5%;
+            }
+            62.5%{background-color: yellow;}
+            75%{}
+            87.5%{background-color: green;}
+            100%{
+                left: 100%;
+                width: 15%;
+            }
+            
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div id="box" ></div>
+
+</body>
+
+</html>
