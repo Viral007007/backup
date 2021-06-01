@@ -1,7 +1,7 @@
 // practice set 2 ; Question 2 : encrypt a grade by adding 8 to it. decrypy it to show the correct grade
 
 
-public class cwd8 {
+public class cwh8 {
     public static void main(String[] args) {
         //encypt grade
         char grade = 'A';

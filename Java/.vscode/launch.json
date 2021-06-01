@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch viral9",
+            "request": "launch",
+            "mainClass": "viral9",
+            "projectName": "Java_59500aa4"
+        },
+        {
+            "type": "java",
             "name": "Launch viral8",
             "request": "launch",
             "mainClass": "viral8",
